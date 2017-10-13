@@ -50,7 +50,7 @@ function walk(dir) {
           entry[name] = pathTo.join(__dirname, entryFile) + '?entry=true';
         } 
         weexEntry[name] = fullpath + '?entry=true';
-      } else if (stat.isDirectory() && file !== 'build' && file !== 'include') {
+      } else if (stat.isDirectory() && file !== 'build' && file !== 'include' && file !== 'components') {
         const subdir = pathTo.join(dir, file);
         walk(subdir);
       }
